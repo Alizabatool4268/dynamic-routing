@@ -1,0 +1,46 @@
+{
+    "products":[ 
+        {
+            "id":1,
+            "image":"/Images/cam 2.png",
+            "heading":"Latest Camera",
+            "Description":"This is the latest camera which will make your pictures shine",
+            "price":"100$"
+        },
+        {
+            "id":2,
+            "image":"/Images/headphones-pink.png",
+            "heading":"Headphones",
+            "Description":"These are the latest piece of headphones ",
+            "price":"120$"
+        },
+        {
+            "id":3,
+            "image":"/Images/image 1164.png",
+            "heading":"Single sofa",
+            "Description":"This is a latest sofa, In the most premium design.",
+            "price":"90.99$"
+        },
+        {
+            "id":4,
+            "image":"/Images/image 1173.png",
+            "heading":"Chair",
+            "Description":"This is a latest chair, In the most premium design.",
+            "price":"80.37$"
+        },
+        {
+            "id":5,
+            "image":"/Images/purepng 1.png",
+            "heading":"Headphones",
+            "Description":"These are the latest piece of headphones",
+            "price":"70$"
+        },
+        {
+            "id":6,
+            "image":"/Images/smartwatch-1.png",
+            "heading":"Latest Camera",
+            "Description":"This is the latest smartwatch.",
+            "price":"210.88$"
+        }
+    ]
+}
