@@ -16,7 +16,7 @@ function Page() {
               <span className='flex justify-center items-center flex-col'>
               <h2 className='font-bold'>{productsData.heading} </h2>
               <p>{productsData.Description}</p>
-              <p>{productsData.price}</p>
+              <p>Price: {productsData.price}</p>
               <Link href={`/shopplace/${productsData.id}`}  className='h-[40px] flex justify-center items-center w-[170px] rounded-md mb-1 bg-black text-white'>View Details</Link>  
               </span>
             </div>
