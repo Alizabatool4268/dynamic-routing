@@ -3,17 +3,17 @@ import Data from "@/productsData.json";
 import Image from 'next/image';
 
 
+interface PageProps {
+  params: Promise<{
+    products: string;
+  }>;
+}
 interface ProductsDetails {
   id:number,
   image:string,
   heading:string,
   Description:string,
   price:string
-}
-interface PageProps {
-  params: Promise<{
-    products: string;
-  }>;
 }
 
 
