@@ -2,6 +2,7 @@ import React from 'react';
 import Data from "@/productsData.json";
 import Image from 'next/image';
 
+
 interface ProductsDetails {
   id:number,
   image:string,
@@ -9,23 +10,23 @@ interface ProductsDetails {
   Description:string,
   price:string
 }
+interface PageProps {
+  params: Promise<{
+    products: string;
+  }>;
+}
 
-export default async function Page({ params }: { params: { products: string } }) {
 
-  {/**
-    NOTE:FOR DEVELOPERS ONLY
-     I have used these log statements for debugging my code. uncomment and put them at the right place for debugging your issue.
-     console.log("Converted productId:", productId);
-     console.log("Data.products:", Data.products);
-     console.log("params.products:", params.products);
-  
-    */}
-  const productId = parseInt(await params.products);
-  
+export default async function Page({ params }:PageProps ) {
+
+  const resolvedParams = await params;
+  const productId = parseInt(resolvedParams.products);
+  if (isNaN(productId)) {
+  return <div>Invalid product ID</div>;
+}
   const product = Data.products.find(
     (proDetail: ProductsDetails) => proDetail.id === productId
   );
-
   if (!product) {
     console.log('Product not found');
     return (
@@ -46,6 +47,7 @@ export default async function Page({ params }: { params: { products: string } })
         </div>
         <div className='flex flex-col justify-center w-[450px]'>
           <p className='text-[28px] font-semibold'>{product.Description}</p>
+          <h5>Price : {product.price}</h5>
           <h6 className='text-blue-500 text-[30px] font-bold'>OFFER</h6>
           <p>Purchasing this {product.heading} in this period of time will provide you with a bundle of offers </p>
            <ul className='list-disc'>
@@ -58,3 +60,7 @@ export default async function Page({ params }: { params: { products: string } })
     </section>
   );
 }
+
+// console.log("Converted productId:", productId);
+// console.log("Data.products:", Data.products);
+// console.log("params.products:", params.products);
