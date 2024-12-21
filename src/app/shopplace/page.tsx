@@ -6,7 +6,7 @@ function Page() {
   return (
     <section className='flex flex-col'>
       <h1  className="text-4xl text-black font-bold text-center mt-7 ">shop</h1>
-      <div className='grid grid-cols-2 grid-rows-3 '>
+      <div className='grid grid-cols-2 grid-rows-3 ssm:grid-cols-1 xsm:grid-cols-1'>
         {data.products.map((productsData)=>(
           <div className='flex justify-center items-center flex-col' key={productsData.id}>
             <div className='w-[250px] border-[1px] border-black border-solid'>
